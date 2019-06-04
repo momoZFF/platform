@@ -1,0 +1,110 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+}
+
+:global(.ant-layout) {
+  min-height: 100%;
+}
+canvas {
+  display: block;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+// temp fix for https://github.com/ant-design/ant-design/commit/a1fafb5b727b62cb0be29ce6e9eca8f579d4f8b7
+:global {
+  .ant-spin-container {
+    overflow: visible !important;
+  }
+  .hide {
+    display: none !important;
+  }
+  //.ant-tabs-bar{
+  //  margin-bottom: 0px !important;
+  //}
+  /******多标签tabs样式 开始******/
+  .globalTabs{
+    .ant-tabs-extra-content{
+      line-height: 40px;
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-nav-container{
+      font-size: 12px;
+      height: 40px !important;
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab{
+      border-radius: 0px;
+      border-top: 0px;
+      line-height: 40px;
+      .anticon-close{
+        display: none;
+      }
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active{
+      padding-bottom: 0px;
+      .anticon-close{
+        display: inline-block;
+      }
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab:hover{
+      padding-left: 20px;
+      padding-right: 20px;
+      .anticon-close{
+        color: #333 !important;
+        display: inline-block;
+      }
+    }
+  }
+  /******多标签tabs样式  结束******/
+
+  /******Table表格  开始******/
+  .ant-table-small > .ant-table-content > .ant-table-body{
+    margin: 0px !important;
+    .ant-table-thead{
+      background: #fafafa;
+    }
+  }
+  //分页样式
+  .defaultSmall{
+    .ant-pagination-item{
+      margin-right: 8px !important;
+      border: 1px solid #d9d9d9 !important;
+      a{
+        text-decoration: none;
+        color: rgba(0,0,0,.65);
+        transition: none;
+        margin: 0 6px;
+      }
+    }
+    .ant-pagination-prev, .ant-pagination-next{
+      border: 1px solid #d9d9d9 ;
+      margin-right: 8px !important;
+    }
+    .ant-pagination-item-active{
+      background-color: #a4bfd5;
+      border-color: #a4bfd5 !important;
+      a{
+        color:#fff !important;
+      }
+    }
+    .ant-pagination-item-active:hover{
+      a{
+        color: #fff !important;
+      }
+    }
+  }
+  /******Table表格  结束******/
+
+}
